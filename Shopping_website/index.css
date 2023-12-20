@@ -6,6 +6,9 @@
     --color-red: #ff0000;
     --color-red-1: #e2231a;
     --color-grey: #999999;
+    --color-pink: rgb(245, 169, 201);
+    --color-pink-1: #e91e63;
+    --color-blue:rgb(0, 170, 255);
     background-color: var(--color-black);
 }
 
@@ -227,6 +230,18 @@ header {
 
 .Shopping_cart:hover {
     border: 1px solid var(--color-red-1);
+}
+
+.cart-count{
+    left: 96px;
+    top: -26px;
+    width: 18px;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    border-radius: 15px;
+    background-color: var(--color-red);
+    color: var(--color-white);
 }
 
 .key_word ul {
@@ -546,23 +561,23 @@ header {
 .container {
     position: relative;
     max-width: 100%;
+    height: 1000px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: minmax(100px auto);
     grid-auto-flow: dense;
     margin: 40px;
     grid-gap: 10px;
 }
 
 .container .box {
-    background: #333;
     padding: 20px;
     display: grid;
     font-size: 20px;
-    font-size: 20px;
     place-items: center;
     text-align: center;
-    transition: 0.5s;
+    /* 背景设置为混合 */
+    background-blend-mode: multiply;
+    transition: ease 0.5s;
 }
 
 .container .box a {
@@ -571,7 +586,13 @@ header {
 }
 
 .container .box:hover {
-    background-color: #e91e63;
+    background-color: var(--color-grey);
+}
+
+.container .box:hover button{
+    background-color: #333;
+    color: #fff;
+    transition: 0.5s;
 }
 
 .container .box img {
@@ -580,24 +601,73 @@ header {
     margin-bottom: 10px;
 }
 
+.container .box button{
+    font-size: 18px;
+    background-color: var(--color-blue);
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+}
+
+.container .box button:hover{
+    background-color: #636363;
+}
+
 .container .box:nth-child(1) {
+    background-image:url(./image/girl_crown_jewelry_999178_1440x900.jpg) ;
+    background-size: cover;
+    background-position: center;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.container .box:nth-child(2) {
+    background-image:url(./image/girl_earrings_jacket_1085128_1440x900.jpg) ;
+    background-size: cover;
+    background-position: center;
     grid-column: span 1;
+    grid-row: span 2;
+}
+
+.container .box:nth-child(3) {
+    background-image:url(./image/girl_headphones_hood_879800_1440x900.jpg) ;
+    background-size: cover;
+    background-position: center;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.container .box:nth-child(4) {
+    background-image:url(./image/guy_eyes_hood_1045265_1440x900.jpg) ;
+    background-size: cover;
+    background-position: center;
+    grid-column: span 3;
     grid-row: span 1;
 }
 
 .container .box:nth-child(5) {
+    background-image:url(./image/2023-11-09-02-43-38-1-1302423408-realismFromHadesSDXL.jpeg) ;
+    background-size: cover;
+    background-position: center;
     grid-column: span 1;
     grid-row: span 2;
 }
 
 .container .box:nth-child(6) {
+    background-image:url(./image/B62CA88B-5EE1-4159-9DFD-7736722D8C96\ 拷贝.jpeg) ;
+    background-size: cover;
+    background-position: center;
     grid-column: span 1;
     grid-row: span 2;
 }
 
 .container .box:nth-child(7) {
+    background-image:url(./image/392580.jpeg) ;
+    background-size: cover;
+    background-position: center;
     grid-column: span 1;
-    grid-row: span 1;
+    grid-row: span 2;
 }
 
 /* main结束 */

@@ -32,6 +32,22 @@ const showSlide = e => {
     indicators[index - 1].style.width = '26px';
     indicators[index - 1].style.background = '#fff';
 }
+let count = 0;
 
-
+function AddTocart() {
+    count += 1;
+    console.log(count);
+    if (count > 0) {
+        const countElement = document.querySelector('.cart-count');
+        if (countElement) {
+            countElement.textContent = count.toString();
+        } else {
+            const element = document.getElementById('cart');
+            element.innerHTML +=
+            `
+            <div class="cart-count">${count}</div>
+            `;
+        }
+    }
+}
 showSlide();
